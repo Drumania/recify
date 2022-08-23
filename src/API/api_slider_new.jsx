@@ -1,0 +1,51 @@
+export const sliderLarge = [
+  {
+    id: 1,
+    bigImg: "gambitodedama.jpg",
+    category: "Drama",
+    title: "Gambito de dama",
+    slug: "gambitodedama",
+  },
+  {
+    id: 2,
+    bigImg: "71mXmB41psS._AC_SL1024_.jpg",
+    category: "Drama",
+    title: "Peaky Blinders",
+    slug: "peakyblinders",
+  },
+  {
+    id: 3,
+    bigImg: "L442VXJXCBBMZNKCX3XUPYT5C4.webp",
+    category: "comedia",
+    title: "Better Call Saul",
+    slug: "bettercallsaul",
+  },
+  {
+    id: 4,
+    bigImg: "bbad.png",
+    category: "Comedy",
+    title: "Breaking Bad",
+    slug: "breakingbad",
+  },
+  {
+    id: 5,
+    bigImg: "portada-got.webp",
+    category: "Drama",
+    title: "Game Of Thrones",
+    slug: "gameofthrones",
+  },
+  {
+    id: 6,
+    bigImg: "The-Sinner.webp",
+    category: "Terror",
+    title: "The Sinner",
+    slug: "thesinner",
+  },
+  {
+    id: 7,
+    bigImg: "mad_men_t.jpg",
+    category: "Comedy",
+    title: "Mad men",
+    slug: "madmen",
+  },
+];
