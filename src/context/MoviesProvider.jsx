@@ -13,9 +13,7 @@ const MoviesProvider = ({ children }) => {
   const moviesSearch = async (filter) => {
     setLoader(true);
     axios
-      .request(
-        `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${filter}`
-      )
+      .request(`https://movies-app1.p.rapidapi.com/api/genres/${filter}`)
       .then(function (response) {
         setList(response.data);
         setLoader(false);

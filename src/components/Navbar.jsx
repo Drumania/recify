@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+//context
+import { UserProvider } from "../context/UserProvider";
+
 import logo from "../assets/logo125.png";
 
-const Navbar = () => {
+const Navbar = (login) => {
+  console.log(login);
   return (
     <nav>
       <Link className="wrap-logo" to="/">
@@ -43,11 +47,19 @@ const Navbar = () => {
           </details>
         </li>
       </ul>
-      <a href="#!" className="btn-primary login">
-        Login
-      </a>
+      {login ? (
+        <span>Hola Martin</span>
+      ) : (
+        <a href="#!" className="btn-primary login">
+          Login
+        </a>
+      )}
     </nav>
   );
 };
 
 export default Navbar;
+
+{
+  /* <a href="#" onClick={onLogout}>Logout</a> */
+}

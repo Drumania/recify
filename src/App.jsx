@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //context
-import { MoviesProvider } from "./context/MoviesProvider";
+import { UserProvider } from "./context/UserProvider";
 
 //pages
 import Home from "./pages/Home";
@@ -16,9 +16,9 @@ import Navbar from "./components/Navbar";
 export default function App() {
   return (
     <>
-      <div className="container-fluid">
-        <MoviesProvider>
-          <BrowserRouter>
+      <UserProvider>
+        <BrowserRouter>
+          <div className="container-fluid">
             <div className="wrap-nav">
               <Navbar />
             </div>
@@ -32,9 +32,9 @@ export default function App() {
                 </Route>
               </Routes>
             </div>
-          </BrowserRouter>
-        </MoviesProvider>
-      </div>
+          </div>
+        </BrowserRouter>
+      </UserProvider>
     </>
   );
 }
