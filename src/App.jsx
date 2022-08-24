@@ -6,7 +6,8 @@ import { MoviesProvider } from "./context/MoviesProvider";
 
 //pages
 import Home from "./pages/Home";
-import ProductsDetail from "./pages/ProductDetail";
+import ProductDetail from "./pages/ProductDetail";
+import Nuevas from "./pages/Nuevas";
 import Category from "./pages/Category";
 
 //Navbar
@@ -24,7 +25,11 @@ export default function App() {
             <div className="wrap-main">
               <Routes>
                 <Route index element={<Home />} />
-                <Route path="category" element={<Category />} />
+                <Route path=":movieSlug" element={<ProductDetail />} />
+                <Route path="nuevas" element={<Nuevas />} />
+                <Route path="category" element={<Category />}>
+                  <Route path=":categoryId" element={<Category />} />
+                </Route>
               </Routes>
             </div>
           </BrowserRouter>

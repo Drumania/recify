@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
 //Fake Api
-import { sliderHero } from "../API/api_slider_hero";
+import { movies } from "../API/api_movie";
 
 const HeroSlider = () => {
   return (
@@ -26,25 +26,32 @@ const HeroSlider = () => {
       pagination={{ clickable: true }}
       className="HeroSlider"
     >
-      {sliderHero.map((element) => (
-        <SwiperSlide
-          key={element.id}
-          style={{
-            backgroundImage: `url(./src/assets/${element.bigImg})`,
-            backgroundPosition: "center top",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <div className="swiper-hero-overlay">
-            <span>{element.category}</span>
-            <h1>{element.title}</h1>
-            <a href={element.slug} className="btn-primary">
-              Ver
-            </a>
-          </div>
-        </SwiperSlide>
-      ))}
+      {movies.map(
+        (element) =>
+          element.sliderHome && (
+            <SwiperSlide
+              key={element.id}
+              style={{
+                backgroundImage: `url(./src/assets/${element.bigImg})`,
+                backgroundPosition: "center center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              <div className="swiper-hero-overlay">
+                <h1>{element.title}</h1>
+                <label>
+                  {element.year}, {element.director}
+                </label>
+                <br />
+                <span>{element.duration}</span> {element.category}
+                <a href={element.slug} className="btn-primary">
+                  Ver
+                </a>
+              </div>
+            </SwiperSlide>
+          )
+      )}
     </Swiper>
   );
 };

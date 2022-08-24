@@ -16,32 +16,31 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link className="nav-link" to="/">
+          <Link className="nav-link" to="/nuevas">
             Nuevas
           </Link>
         </li>
         <li>
-          <Link className="nav-link" to="/category">
-            Categorias
-          </Link>
-
-          <ul>
-            <li>
-              <a href="#!">Terror</a>
-            </li>
-            <li>
-              <a href="#!">Drama</a>
-            </li>
-            <li>
-              <a href="#!">Comedia</a>
-            </li>
-            <li>
-              <a href="#!">Documental</a>
-            </li>
-            <li>
-              <a href="#!">Ciencia ficción</a>
-            </li>
-          </ul>
+          <details>
+            <summary className="nav-link">Categorias</summary>
+            <ul>
+              <li>
+                <Link to="/category/Terror">Terror</Link>
+              </li>
+              <li>
+                <Link to="/category/Drama">Drama</Link>
+              </li>
+              <li>
+                <Link to="/category/Comedia">Comedia</Link>
+              </li>
+              <li>
+                <Link to="/category/Documental">Documental</Link>
+              </li>
+              <li>
+                <Link to="/category/Ciencia ficción">Ciencia ficción</Link>
+              </li>
+            </ul>
+          </details>
         </li>
       </ul>
       <a href="#!" className="btn-primary login">

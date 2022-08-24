@@ -10,9 +10,9 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
 //Fake Api
-import { sliderLarge } from "../API/api_slider_new";
+import { movies } from "../API/api_movie";
 
-const SliderLarge = ({ titleSlider }) => {
+const SliderLarge = ({ titleSlider, condition }) => {
   return (
     <>
       <h2>{titleSlider}</h2>
@@ -23,21 +23,28 @@ const SliderLarge = ({ titleSlider }) => {
         spaceBetween={30}
         className="swiperLarge"
       >
-        {sliderLarge.map((element) => (
-          <SwiperSlide
-            key={element.id}
-            style={{
-              backgroundImage: `url(./src/assets/${element.bigImg})`,
-              backgroundPosition: "center top",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          >
-            <a href={element.slug} className="full-link" title={element.title}>
-              {element.title}
-            </a>
-          </SwiperSlide>
-        ))}
+        {movies.map(
+          (element) =>
+            element[condition] && (
+              <SwiperSlide
+                key={element.id}
+                style={{
+                  backgroundImage: `url(./src/assets/${element.bigImg})`,
+                  backgroundPosition: "center top",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+                <a
+                  href={element.slug}
+                  className="full-link"
+                  title={element.title}
+                >
+                  <label>{element.title}</label>
+                </a>
+              </SwiperSlide>
+            )
+        )}
       </Swiper>
     </>
   );
