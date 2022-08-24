@@ -18,7 +18,7 @@ export const movies = [
   {
     id: 2,
     title: "Braveheart",
-    slug: "braveheart ",
+    slug: "braveheart",
     bigImg: "braveheart-1995-3-1659108647.jpeg",
     director: "Mel Gibson",
     sinopsis:
@@ -50,7 +50,7 @@ export const movies = [
   {
     id: 4,
     title: "Joker",
-    slug: "joker ",
+    slug: "joker",
     bigImg: "joker-joaquin-phoenix-film-1659108645.jpg",
     director: "Todd Phillips",
     sinopsis:
@@ -66,7 +66,7 @@ export const movies = [
   {
     id: 5,
     title: "American Beauty",
-    slug: "americanbeauty ",
+    slug: "americanbeauty",
     bigImg: "american-beauty-kmnh-u907863933720k-1248x770atrc-1657889036.jpg",
     director: "Sam Mendes",
     sinopsis:
@@ -82,7 +82,7 @@ export const movies = [
   {
     id: 6,
     title: "Vengadores: Infinity War",
-    slug: "vengadoresinfinitywar ",
+    slug: "vengadoresinfinitywar",
     bigImg: "infinity-war-1656085938.jpg",
     director: "Anthony Russo, Joe Russo",
     sinopsis:
@@ -98,7 +98,7 @@ export const movies = [
   {
     id: 7,
     title: "El resplandor",
-    slug: "elresplandor ",
+    slug: "elresplandor",
     bigImg: "el-resplandor-1656085938.jpg",
     director: "Stanley Kubrick",
     sinopsis:
@@ -114,7 +114,7 @@ export const movies = [
   {
     id: 8,
     title: "Django desencadenado",
-    slug: "djangodesencadenado ",
+    slug: "djangodesencadenado",
     bigImg: "django-1655132129.jpg",
     director: "Quentin Tarantino",
     sinopsis:
@@ -130,7 +130,7 @@ export const movies = [
   {
     id: 10,
     title: "En busca del arca perdida",
-    slug: "enbuscadelarcaperdida ",
+    slug: "enbuscadelarcaperdida",
     bigImg: "en-busca-del-arca-perdida-1655132129.jpg",
     director: "Steven Spielberg",
     sinopsis:
@@ -164,7 +164,7 @@ export const movies = [
   {
     id: 12,
     title: "Top Gun: Maverick",
-    slug: "topgunmaverick ",
+    slug: "topgunmaverick",
     bigImg: "top-gun-2-maverick-tom-cruise-jennifer-connelly-1617788063.jpg",
     director: "Joseph Kosinski",
     sinopsis:
@@ -181,7 +181,7 @@ export const movies = [
   {
     id: 13,
     title: "Hara-Kiri",
-    slug: "harakiri ",
+    slug: "harakiri",
     bigImg: "harakiri-1595531688.jpg",
     director: "Masaki Kobayashi",
     sinopsis:
@@ -198,7 +198,7 @@ export const movies = [
   {
     id: 14,
     title: "Whiplash",
-    slug: "whiplash ",
+    slug: "whiplash",
     bigImg: "35-whiplash.jpg",
     director: "Damien Chazelle",
     sinopsis:
@@ -215,7 +215,7 @@ export const movies = [
   {
     id: 15,
     title: "Psicosis",
-    slug: "psicosis ",
+    slug: "psicosis",
     bigImg: "41-psicosis.jpg",
     director: "Alfred Hitchcock",
     sinopsis:
@@ -249,7 +249,7 @@ export const movies = [
   {
     id: 17,
     title: "Regreso al futuro",
-    slug: "regresoalfuturo ",
+    slug: "regresoalfuturo",
     bigImg: "regreso-al-futuro-1543591177.jpg",
     director: "Steven Spielberg",
     sinopsis:
@@ -265,7 +265,7 @@ export const movies = [
   {
     id: 18,
     title: "Interstellar",
-    slug: "interstellar ",
+    slug: "interstellar",
     bigImg: "interestellar.jpg",
     director: "Christopher Nolan",
     sinopsis:
@@ -282,7 +282,7 @@ export const movies = [
   {
     id: 19,
     title: "La milla verde",
-    slug: "lamillaverde ",
+    slug: "lamillaverde",
     bigImg: "42-lamillaverde.jpg",
     director: "Frank Darabont",
     sinopsis:
@@ -298,7 +298,7 @@ export const movies = [
   {
     id: 20,
     title: "Salvar al soldado Ryan",
-    slug: "salvaralsoldadoryan ",
+    slug: "salvaralsoldadoryan",
     bigImg: "38-salvarsoldadoryan.jpg",
     director: "Steven Spielberg",
     sinopsis:
@@ -315,7 +315,7 @@ export const movies = [
   {
     id: 21,
     title: "Ciudad de Dios",
-    slug: "ciudaddedios ",
+    slug: "ciudaddedios",
     bigImg: "22-ciudaddedios.jpg",
     director: "Fernando Meirelles",
     sinopsis:
@@ -331,7 +331,7 @@ export const movies = [
   {
     id: 22,
     title: "El silencio de los corderos",
-    slug: "elsilenciodeloscorderos ",
+    slug: "elsilenciodeloscorderos",
     bigImg: "28-elsilenciodeloscorderos.jpg",
     director: "Jonathan Demme",
     sinopsis:
@@ -347,7 +347,7 @@ export const movies = [
   {
     id: 23,
     title: "Seven",
-    slug: "seven ",
+    slug: "seven",
     bigImg: "25-seven.jpg",
     director: "David Fincher",
     sinopsis:
@@ -363,7 +363,7 @@ export const movies = [
   {
     id: 24,
     title: "Matrix",
-    slug: "matrix ",
+    slug: "matrix",
     bigImg: "21-matrix.jpg",
     director: "Andy Wachowski, Larry Wachowski",
     sinopsis:
@@ -379,7 +379,7 @@ export const movies = [
   {
     id: 25,
     title: "El imperio contraataca",
-    slug: "elimperiocontraataca ",
+    slug: "elimperiocontraataca",
     bigImg: "13-elimperiocontraataca.jpg",
     director: "Irvin Kershner",
     sinopsis:
@@ -395,7 +395,7 @@ export const movies = [
   {
     id: 26,
     title: "Origen",
-    slug: "origen ",
+    slug: "origen",
     bigImg: "12-origen.jpg",
     director: "Christopher Nolan",
     sinopsis:
@@ -411,7 +411,7 @@ export const movies = [
   {
     id: 27,
     title: "El club de la lucha",
-    slug: "Elclubdelalucha ",
+    slug: "Elclubdelalucha",
     bigImg: "10-elclubdelalucha.jpg",
     director: "David Fincher",
     sinopsis:
@@ -443,7 +443,7 @@ export const movies = [
   {
     id: 29,
     title: "El señor de los anillos: La comunidad del anillo",
-    slug: "Lacomunidaddelanillo ",
+    slug: "Lacomunidaddelanillo",
     bigImg: "11-elsenordelosanillos.jpg",
     director: "Peter Jackson",
     sinopsis:
@@ -459,7 +459,7 @@ export const movies = [
   {
     id: 30,
     title: "Pulp Fiction",
-    slug: "pulpfiction ",
+    slug: "pulpfiction",
     bigImg: "05-pulpfiction.jpg",
     director: "Quentin Tarantino",
     sinopsis:
@@ -507,7 +507,7 @@ export const movies = [
   {
     id: 33,
     title: "Morbius",
-    slug: "morbius ",
+    slug: "morbius",
     bigImg: "morbius-official-trailer-1635860706.jpg",
     director: "Daniel Espinosa",
     sinopsis:
@@ -523,7 +523,7 @@ export const movies = [
   {
     id: 34,
     title: "Muerte en el Nilo",
-    slug: "muerteenelnilo ",
+    slug: "muerteenelnilo",
     bigImg: "muerte-en-el-nilo-fotogramas-1628081297.jpg",
     director: "Kenneth Branagh",
     sinopsis:
@@ -539,7 +539,7 @@ export const movies = [
   {
     id: 35,
     title: "Moonfall",
-    slug: "Moonfall ",
+    slug: "Moonfall",
     bigImg: "captura-de-pantalla-2022-02-02-a-las-10-31-56-1643794328.jpg",
     director: "Patrick Wilson",
     sinopsis:
@@ -555,7 +555,7 @@ export const movies = [
   {
     id: 36,
     title: "Agentes 355",
-    slug: "agentes355 ",
+    slug: "agentes355",
     bigImg: "the-355-poster-1601962918.jpeg",
     director: "Jason Bourne",
     sinopsis:
@@ -571,7 +571,7 @@ export const movies = [
   {
     id: 37,
     title: "Lightyear",
-    slug: "Lightyear ",
+    slug: "Lightyear",
     bigImg: "lightyear-chris-evans-1649935658.jpg",
     director: "Calma Segura",
     sinopsis:
@@ -587,7 +587,7 @@ export const movies = [
   {
     id: 38,
     title: "Veneciafrenia",
-    slug: "Veneciafrenia ",
+    slug: "Veneciafrenia",
     bigImg: "veneciafrenia-alex-de-la-iglesia-1635420356.jpg",
     director: "Álex de la Iglesia",
     sinopsis:

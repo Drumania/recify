@@ -6,7 +6,7 @@ import { MoviesProvider } from "./context/MoviesProvider";
 
 //pages
 import Home from "./pages/Home";
-import ProductDetail from "./pages/ProductDetail";
+import MovieDetail from "./pages/MovieDetail";
 import Nuevas from "./pages/Nuevas";
 import Category from "./pages/Category";
 
@@ -25,7 +25,7 @@ export default function App() {
             <div className="wrap-main">
               <Routes>
                 <Route index element={<Home />} />
-                <Route path=":movieSlug" element={<ProductDetail />} />
+                <Route path=":movieSlug" element={<MovieDetail />} />
                 <Route path="nuevas" element={<Nuevas />} />
                 <Route path="category" element={<Category />}>
                   <Route path=":categoryId" element={<Category />} />
