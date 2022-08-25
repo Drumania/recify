@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //context
-import { UserProvider } from "./context/UserProvider";
+import { ContextProvider } from "./context/AuthProvider";
 
 //pages
 import Home from "./pages/Home";
@@ -16,7 +16,7 @@ import Navbar from "./components/Navbar";
 export default function App() {
   return (
     <>
-      <UserProvider>
+      <ContextProvider>
         <BrowserRouter>
           <div className="container-fluid">
             <div className="wrap-nav">
@@ -34,7 +34,7 @@ export default function App() {
             </div>
           </div>
         </BrowserRouter>
-      </UserProvider>
+      </ContextProvider>
     </>
   );
 }

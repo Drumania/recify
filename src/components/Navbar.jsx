@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-//context
-import { UserProvider } from "../context/UserProvider";
-
+import Login from "./Login";
+import useLogin from "../hooks/useLogin";
 import logo from "../assets/logo125.png";
 
-const Navbar = (login) => {
-  console.log(login);
+const Navbar = () => {
+  const { isLogged, loginForm, setLoginForm, user, logout } = useLogin();
+
   return (
     <nav>
       <Link className="wrap-logo" to="/">
@@ -47,13 +47,25 @@ const Navbar = (login) => {
           </details>
         </li>
       </ul>
-      {login ? (
-        <span>Hola Martin</span>
+
+      {isLogged ? (
+        <div className="user">
+          Hola <strong>{user.nombre}</strong>!
+          <a href="#!" onClick={() => logout()}>
+            Salir
+          </a>
+        </div>
       ) : (
-        <a href="#!" className="btn-primary login">
+        <a
+          href="#!"
+          className="btn-primary login"
+          onClick={() => setLoginForm(true)}
+        >
           Login
         </a>
       )}
+
+      {loginForm && <Login />}
     </nav>
   );
 };

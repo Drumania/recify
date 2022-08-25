@@ -1,68 +1,70 @@
-import React, { useContext } from "react";
-import { useSetState } from "react-use";
-
-import { AuthContext } from "../context/Auth.context.js";
-
-const initialState = {
-  email: "",
-  password: "",
-};
+import React, { useState } from "react";
+import useLogin from "../hooks/useLogin";
 
 const Login = () => {
-  const { state: ContextState, login } = useContext(AuthContext);
-  const { isLoginPending, isLoggedIn, loginError } = ContextState;
-  const [state, setState] = useSetState(initialState);
+  const { login, loginError, setLoginError, setLoginForm } = useLogin();
 
-  const onSubmit = (e) => {
+  const [user, setUser] = useState({
+    email: "",
+    password: "",
+  });
+
+  const isValidEmail = (email) => {
+    return /\S+@\S+\.\S+/.test(email);
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const { email, password } = state;
-    login(email, password);
-    setState({
-      email: "",
-      password: "",
-    });
+
+    if (user.email && user.password) {
+      if (isValidEmail(user.email)) {
+        login(user.email, user.password);
+      } else {
+        setLoginError("Invalid email");
+      }
+    } else {
+      setLoginError("The fields are required");
+    }
   };
 
   return (
-    <form name="loginForm" onSubmit={onSubmit}>
-      <div className="row">
-        <div className="col-sm-3 col-md-6">
-          <label htmlFor="email">Username</label>
-        </div>
-
-        <div className="col-sm-9 col-md-6">
+    <div className="wrap-form">
+      <div className="form">
+        <span onClick={() => setLoginForm(false)}>&#10006;</span>
+        <form name="loginForm" onSubmit={handleSubmit}>
+          <label htmlFor="email">Email de Usuario</label>
           <input
-            type="text"
+            type="email"
             name="email"
-            onChange={(e) => setState({ email: e.target.value })}
-            value={state.email}
-            placeholder="admin"
+            onChange={(e) =>
+              setUser({
+                ...user,
+                [e.target.name]: e.target.value,
+              })
+            }
+            value={user.email}
+            placeholder="email"
           />
-        </div>
-
-        <div className="col-sm-3 col-md-6">
           <label htmlFor="password">Password</label>
-        </div>
-        <div className="col-sm-9 col-md-6">
           <input
             type="password"
             name="password"
-            onChange={(e) => setState({ password: e.target.value })}
-            value={state.password}
-            placeholder="admin"
+            onChange={(e) =>
+              setUser({
+                ...user,
+                [e.target.name]: e.target.value,
+              })
+            }
+            value={user.password}
+            placeholder="password"
           />
-        </div>
+          <input className="btn-primary" type="submit" value="Login" />
+          {loginError && <div className="error">{loginError}</div>}
 
-        <div className="col-sm-3 col-md-6"></div>
-        <div className="col-sm-9 col-md-6">
-          <input className="primary" type="submit" value="Login" />
-        </div>
+          <p>fake user: admin@admin.com admin123</p>
+        </form>
       </div>
-
-      {isLoginPending && <div>Please wait...</div>}
-      {isLoggedIn && <div>Success.</div>}
-      {loginError && <div>{loginError.message}</div>}
-    </form>
+    </div>
   );
 };
 

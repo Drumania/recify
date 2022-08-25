@@ -3,9 +3,6 @@ import axios from "axios";
 
 const MoviesContext = createContext();
 
-// API TRAGOS
-// https://www.thecocktaildb.com/api.php
-
 const MoviesProvider = ({ children }) => {
   const [loader, setLoader] = useState(true);
   const [list, setList] = useState([]);
