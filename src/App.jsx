@@ -12,6 +12,7 @@ import Category from "./pages/Category";
 
 //Navbar
 import Navbar from "./components/Navbar";
+import Topbar from "./components/Topbar";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
               <Navbar />
             </div>
             <div className="wrap-main">
+              <Topbar />
               <Routes>
                 <Route index element={<Home />} />
                 <Route path=":movieSlug" element={<MovieDetail />} />

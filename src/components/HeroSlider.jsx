@@ -41,10 +41,9 @@ const HeroSlider = () => {
               <div className="swiper-hero-overlay">
                 <h1>{element.title}</h1>
                 <label>
+                  <span>{element.duration}</span>
                   {element.year}, {element.director}
                 </label>
-                <br />
-                <span>{element.duration}</span> {element.category}
                 <a href={element.slug} className="btn-primary">
                   Ver
                 </a>
