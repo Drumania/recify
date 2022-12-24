@@ -333,35 +333,9 @@ h5.divider {
 }
 
 .swiperLarge .swiper-slide {
-  width: 220px;
-  height: 180px;
-  border-radius: var(--border-radius);
+  width: 300px;
+  height: 300px;
   overflow: hidden;
-}
-
-.full-link {
-  display: flex;
-  width: 350px;
-  height: 250px;
-  background: rgba(17, 18, 20, 0.2);
-  text-decoration: none !important;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
-  padding: 20px;
-  font-size: 1.2rem;
-  color: var(--tx-color);
-  text-shadow: 1px 1px 2px rgb(0 0 0 / 60%);
-}
-
-.full-link:hover {
-  background: rgb(17, 18, 20, 0.2);
-  background: linear-gradient(
-    9deg,
-    rgba(17, 18, 20, 0.7) 11%,
-    rgba(17, 18, 20, 0.7) 24%,
-    rgba(17, 18, 20, 0) 100%
-  );
 }
 
 /* thumb content */
@@ -373,34 +347,37 @@ h5.divider {
 }
 
 .thumb-content {
-  margin: 20px 20px 70px;
-  width: 350px;
-  height: 250px;
+  width: 300px;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #212227;
 }
 
-.thumb-content .full-link {
-  display: flex;
-  width: 350px;
-  height: 250px;
-  background: rgba(17, 18, 20, 0.2);
-  text-decoration: none !important;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
-  padding: 20px;
-  font-size: 1.2rem;
-  color: var(--tx-color);
-  text-shadow: 1px 1px 2px rgb(0 0 0 / 60%);
+.thumb-content .thumb-img {
+  height: 200px;
+  border-radius: var(--border-radius);
 }
 
-.thumb-content .full-link:hover {
-  background: rgb(17, 18, 20, 0.2);
-  background: linear-gradient(
-    9deg,
-    rgba(17, 18, 20, 0.7) 11%,
-    rgba(17, 18, 20, 0.7) 24%,
-    rgba(17, 18, 20, 0) 100%
-  );
+.thumb-content .name-session {
+  font-size: 16px;
+  color: var(--wh-color);
+  cursor: pointer;
+  padding: 10px 0;
+  display: block;
+  line-height: 20px;
+}
+
+.thumb-content .name-artist {
+  color: var(--fr-color);
+  margin-bottom: 20px;
+  display: block;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.name-artist:hover {
+  text-decoration: underline;
 }
 
 /* content list */

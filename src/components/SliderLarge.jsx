@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Navigation } from "swiper";
+import ThumbContent from "./ThumbContent";
 
 //Fake Api
 import { contents } from "../API/api_content";
@@ -26,22 +27,14 @@ const SliderLarge = ({ titleSlider, condition }) => {
         {contents.map(
           (element) =>
             element[condition] && (
-              <SwiperSlide
-                key={element.id}
-                style={{
-                  backgroundImage: `url(./src/assets/${element.bigImg})`,
-                  backgroundPosition: "center top",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                }}
-              >
-                <a
-                  href={element.slug}
-                  className="full-link"
+              <SwiperSlide key={element.id}>
+                <ThumbContent
+                  id={element.id}
+                  bigImg={element.bigImg}
+                  slug={element.slug}
                   title={element.title}
-                >
-                  <label>{element.title}</label>
-                </a>
+                  director={element.director}
+                />
               </SwiperSlide>
             )
         )}

@@ -16,10 +16,11 @@ const Category = () => {
           (element) =>
             element.category === categoryId && (
               <ThumbContent
-                key={element.id}
+                id={element.id}
                 bigImg={element.bigImg}
-                slug={`../${element.slug}`}
+                slug={element.slug}
                 title={element.title}
+                director={element.director}
               />
             )
         )}
