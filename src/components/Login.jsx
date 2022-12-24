@@ -43,7 +43,7 @@ const Login = () => {
               })
             }
             value={user.email}
-            placeholder="email"
+            placeholder="ej: email@email.com"
           />
           <label htmlFor="password">Password</label>
           <input
@@ -56,7 +56,6 @@ const Login = () => {
               })
             }
             value={user.password}
-            placeholder="password"
           />
           <input className="btn-primary" type="submit" value="Login" />
           {loginError && <div className="error">{loginError}</div>}

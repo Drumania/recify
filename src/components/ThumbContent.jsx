@@ -1,10 +1,10 @@
 import React from "react";
 
-const ThumbMovie = ({ id, bigImg, slug, title }) => {
+const ThumbContent = ({ id, bigImg, slug, title }) => {
   return (
     <>
       <div
-        className="thumb-movie"
+        className="thumb-content"
         key={id}
         style={{
           backgroundImage: `url(../src/assets/${bigImg})`,
@@ -21,4 +21,4 @@ const ThumbMovie = ({ id, bigImg, slug, title }) => {
   );
 };
 
-export default ThumbMovie;
+export default ThumbContent;

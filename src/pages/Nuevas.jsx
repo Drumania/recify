@@ -1,16 +1,16 @@
 import React from "react";
 
 //Fake Api
-import { movies } from "../API/api_movie";
+import { contents } from "../API/api_content";
 
 const Nuevas = () => {
   return (
     <>
       <h3>
-        Nuevas <span>Peliculas</span>
+        New <span>Sessions</span>
       </h3>
-      <ul className="list-movies">
-        {movies.map(
+      <ul className="list-contents">
+        {contents.map(
           (element) =>
             element.nuevas && (
               <li key={element.id}>

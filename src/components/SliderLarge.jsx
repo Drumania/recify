@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
 //Fake Api
-import { movies } from "../API/api_movie";
+import { contents } from "../API/api_content";
 
 const SliderLarge = ({ titleSlider, condition }) => {
   return (
@@ -23,7 +23,7 @@ const SliderLarge = ({ titleSlider, condition }) => {
         spaceBetween={30}
         className="swiperLarge"
       >
-        {movies.map(
+        {contents.map(
           (element) =>
             element[condition] && (
               <SwiperSlide

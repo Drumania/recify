@@ -6,7 +6,7 @@ import { ContextProvider } from "./context/AuthProvider";
 
 //pages
 import Home from "./pages/Home";
-import MovieDetail from "./pages/MovieDetail";
+import ContentDetail from "./pages/ContentDetail";
 import Nuevas from "./pages/Nuevas";
 import Category from "./pages/Category";
 
@@ -27,7 +27,7 @@ export default function App() {
               <Topbar />
               <Routes>
                 <Route index element={<Home />} />
-                <Route path=":movieSlug" element={<MovieDetail />} />
+                <Route path=":contentSlug" element={<ContentDetail />} />
                 <Route path="nuevas" element={<Nuevas />} />
                 <Route path="category" element={<Category />}>
                   <Route path=":categoryId" element={<Category />} />

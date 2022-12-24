@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import ThumbMovie from "../components/ThumbMovie";
+import ThumbContent from "../components/ThumbContent";
 
 //Fake Api
-import { movies } from "../API/api_movie";
+import { contents } from "../API/api_content";
 
 const Category = () => {
   let { categoryId } = useParams();
@@ -12,10 +12,10 @@ const Category = () => {
     <>
       <h3>{categoryId}</h3>
       <div className="wrap-thumbs">
-        {movies.map(
+        {contents.map(
           (element) =>
             element.category === categoryId && (
-              <ThumbMovie
+              <ThumbContent
                 key={element.id}
                 bigImg={element.bigImg}
                 slug={`../${element.slug}`}
