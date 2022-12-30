@@ -1,8 +1,6 @@
 import React from "react";
-import search from "../assets/icos/strong_search_g.svg";
 import Login from "./Login";
 import useLogin from "../hooks/useLogin";
-import bell from "../assets/icos/bell.svg";
 import user_no_photo from "../assets/icos/user_no_photo.svg";
 
 const Topbar = () => {
@@ -10,16 +8,30 @@ const Topbar = () => {
 
   return (
     <div className="topbar">
+      <div className="arrow-nav">
+        <button>
+          <span class="material-symbols-outlined">arrow_back_ios</span>
+        </button>
+        <button>
+          <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </button>
+      </div>
       <div id="search">
         <input type="search" placeholder="Search..." />
-        <img src={search} alt="search" />
+        <span class="material-symbols-outlined">search</span>
       </div>
       <div id="user">
         {isLogged ? (
           <div className="user-loged">
+            <button>
+              <span class="material-symbols-outlined">notifications</span>
+            </button>
             <img src={user_no_photo} alt="user_no_photo" />
             <strong>{user.nombre}</strong>
-            <img src={bell} alt="bell" />
+
+            <button>
+              <span class="material-symbols-outlined">expand_more</span>
+            </button>
             <a href="#!" onClick={() => logout()}>
               Salir
             </a>

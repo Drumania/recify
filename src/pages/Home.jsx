@@ -1,16 +1,22 @@
 import React from "react";
 
 //content
-import Hero from "../components/Hero/";
+import Hero from "../components/Hero";
+import MadeforYou from "../components/MadeforYou";
 import SliderLarge from "../components/SliderLarge";
 
 const Home = () => {
   return (
     <>
-      <Hero />
-      <SliderLarge titleSlider={"Trending"} condition={"sliderHome"} />
-      <SliderLarge titleSlider={"Nuevas"} condition={"nuevas"} />
-      <SliderLarge titleSlider={"Mi Lista"} condition={"favoritas"} />
+      <div className="structure-home">
+        <div>
+          <Hero />
+          <SliderLarge titleSlider={"Trending"} condition={"sliderHome"} />
+          <SliderLarge titleSlider={"Nuevas"} condition={"nuevas"} />
+          <SliderLarge titleSlider={"Mi Lista"} condition={"favoritas"} />
+        </div>
+        <MadeforYou />
+      </div>
     </>
   );
 };

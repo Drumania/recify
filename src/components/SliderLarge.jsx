@@ -33,7 +33,9 @@ const SliderLarge = ({ titleSlider, condition }) => {
                   bigImg={element.bigImg}
                   slug={element.slug}
                   title={element.title}
-                  director={element.director}
+                  artist={element.artist}
+                  duration={element.duration}
+                  year={element.year}
                 />
               </SwiperSlide>
             )

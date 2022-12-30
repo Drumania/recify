@@ -1,6 +1,6 @@
 import React from "react";
 
-const ThumbContent = ({ id, bigImg, slug, title, director }) => {
+const ThumbContent = ({ id, bigImg, slug, title, artist, duration, year }) => {
   return (
     <>
       <div className="thumb-content" data-link={slug} data-id={id}>
@@ -15,8 +15,15 @@ const ThumbContent = ({ id, bigImg, slug, title, director }) => {
         >
           &nbsp;
         </div>
-        <label className="name-session">{title}</label>
-        <span className="name-artist">{director}</span>
+        <div className="name">
+          <div>
+            <label className="name-session">{title}</label>
+            <span className="name-artist">{artist}</span>
+          </div>
+          <div className="duration">
+            <label>{duration}</label> <sup>{year}</sup>
+          </div>
+        </div>
       </div>
     </>
   );

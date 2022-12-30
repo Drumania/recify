@@ -6,8 +6,8 @@
   --wh-color: #ececec;
   --fr-color: #fc107a;
   --se-color: #d71e70;
-  --tx-color: #767682;
-  --font: "Montserrat", sans-serif;
+  --tx-color: #868695;
+  --font: "Archivo", sans-serif;
   --font-size: 12px;
 
   --swiper-theme-color: rgba(221, 32, 111, 0.479);
@@ -96,7 +96,7 @@ h2 {
   font-size: 1.4rem;
   line-height: 130%;
   text-shadow: 1px 1px 2px rgb(0 0 0 / 60%);
-  padding: 20px 0 0 0;
+  padding: 20px 0 10px;
   margin: 0;
 }
 
@@ -190,20 +190,38 @@ nav a.login {
   display: block;
 }
 
+.nav-item .nav-link span {
+  font-size: 15px;
+  vertical-align: -3px;
+  padding-right: 10px;
+}
+
 .nav-item .last-link {
   margin-bottom: 30px;
 }
 
 h5.divider {
-  border-top: 1px solid var(--lines-color);
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 0.7rem;
-  color: var(--light-color);
+  color: var(--wh-color);
   padding-top: 10px;
   margin: 0;
-  opacity: 0.3;
 }
+
+/* Home */
+.structure-home {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.structure-home > div:nth-child(1) {
+  width: calc(100% - 340px);
+  padding-right: 20px;
+  border-right: 1px solid var(--lines-color);
+}
+
 /* button */
 
 .btn-primary,
@@ -227,6 +245,18 @@ h5.divider {
   background-color: var(--fr-color);
   color: var(--wh-color) !important;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* html button */
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  color: var(--tx-color);
+}
+
+button:hover {
+  color: var(--wh-color) !important;
 }
 
 /* topbar */
@@ -310,26 +340,31 @@ h5.divider {
 
 .hero .hero-overlay span {
   color: var(--wh-color);
-  background-color: #0000005c;
+  border: 1px solid var(--wh-color);
+  background-color: transparent;
   border-radius: 4px;
   padding: 5px 10px;
   margin: 0 10px 40px 0;
-  display: inline-block;
   border-radius: 30px;
   font-size: 0.8rem;
-  position: absolute;
-  top: 20px;
-  right: 20px;
 }
 
 .hero .hero-overlay a {
   margin-top: 20px;
 }
 
+/* made for you */
+.made-for-you {
+  padding: 0 20px;
+  width: 340px;
+  position: sticky;
+  top: 0;
+  right: 0;
+}
 /* swiperLarge */
 
 .swiperLarge {
-  margin: 20px 20px 70px 0;
+  margin: 0 20px 20px 0;
 }
 
 .swiperLarge .swiper-slide {
@@ -358,11 +393,19 @@ h5.divider {
   border-radius: var(--border-radius);
 }
 
+.thumb-content .name {
+  display: flex;
+}
+
+.thumb-content .name div:nth-child(1) {
+  width: calc(100% - 62px);
+}
+
 .thumb-content .name-session {
   font-size: 16px;
   color: var(--wh-color);
   cursor: pointer;
-  padding: 10px 0;
+  padding: 10px 10px 0 0;
   display: block;
   line-height: 20px;
 }
@@ -378,6 +421,24 @@ h5.divider {
 
 .name-artist:hover {
   text-decoration: underline;
+}
+
+.thumb-content .duration {
+  width: 62px;
+  font-size: 12px;
+
+  color: var(--tx-color);
+  text-align: right;
+  padding-right: 5px;
+  margin-top: 8px;
+}
+
+.thumb-content .duration label {
+  height: 26px;
+  display: block;
+  border-radius: 4px;
+  border: 1px solid var(--lines-color);
+  text-align: center;
 }
 
 /* content list */

@@ -15,30 +15,44 @@ const Navbar = () => {
         </li>
         <li>
           <Link className="nav-link active" to="/">
-            Home
+            <span class="material-symbols-outlined">home</span> Home
           </Link>
         </li>
         <li>
           <Link className="nav-link" to="/nuevas">
+            <span class="material-symbols-outlined">travel_explore</span>{" "}
             Discover
           </Link>
         </li>
         <li className="last-link">
           <Link className="nav-link" to="/nuevas">
-            New
+            <span class="material-symbols-outlined">new_releases</span> New
           </Link>
         </li>
         <li>
-          <h5 className="divider">User</h5>
+          <h5 className="divider">Your library</h5>
+        </li>
+        <li>
+          <Link className="nav-link" to="/nuevas">
+            Recently Played
+          </Link>
         </li>
         <li>
           <Link className="nav-link" to="/nuevas">
             Favorites
           </Link>
         </li>
-        <li>
+        <li className="last-link">
           <Link className="nav-link" to="/nuevas">
             Artists
+          </Link>
+        </li>
+        <li>
+          <h5 className="divider">Playlists</h5>
+        </li>
+        <li>
+          <Link className="nav-link" to="/nuevas">
+            Recently Played
           </Link>
         </li>
         {/* <li>

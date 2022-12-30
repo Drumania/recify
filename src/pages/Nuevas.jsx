@@ -32,7 +32,7 @@ const Nuevas = () => {
                   <div className="card-nueva-header">
                     <h4>{element.title}</h4>
                     <label>
-                      {element.year}, {element.director}
+                      {element.year}, {element.artist}
                     </label>
                     <span>{element.duration}</span> {element.category}
                   </div>
