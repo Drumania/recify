@@ -19,8 +19,7 @@ const Hero = () => {
         <div className="hero-overlay">
           <label>{contents[0].artist}</label>
           <h1>{contents[0].title}</h1>
-          {contents[0].year} &bull; {contents[0].duration} &bull;
-          <span> Full HD</span>
+          {contents[0].year} &bull; {contents[0].duration}
           <a href={contents[0].slug} className="btn-primary">
             Ver
           </a>

@@ -15,18 +15,18 @@ const Navbar = () => {
         </li>
         <li>
           <Link className="nav-link active" to="/">
-            <span class="material-symbols-outlined">home</span> Home
+            <span className="material-symbols-outlined">home</span> Home
           </Link>
         </li>
         <li>
           <Link className="nav-link" to="/nuevas">
-            <span class="material-symbols-outlined">travel_explore</span>{" "}
+            <span className="material-symbols-outlined">travel_explore</span>{" "}
             Discover
           </Link>
         </li>
         <li className="last-link">
           <Link className="nav-link" to="/nuevas">
-            <span class="material-symbols-outlined">new_releases</span> New
+            <span className="material-symbols-outlined">new_releases</span> New
           </Link>
         </li>
         <li>
@@ -52,7 +52,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link className="nav-link" to="/nuevas">
-            Recently Played
+            Chill-Rock
           </Link>
         </li>
         {/* <li>

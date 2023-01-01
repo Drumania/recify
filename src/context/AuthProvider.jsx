@@ -15,7 +15,7 @@ const ContextProvider = ({ children }) => {
     if (email === "admin@admin.com" && password === "admin123") {
       return (
         setUser({
-          nombre: "martin",
+          nombre: "Martin Brumana",
           email,
           password,
         }),
