@@ -1,10 +1,20 @@
 import React from "react";
 
-const ThumbContent = ({ id, bigImg, slug, title, artist, duration, year }) => {
+const ThumbContent = ({
+  id,
+  bigImg,
+  slug,
+  title,
+  artist,
+  slugArtist,
+  duration,
+  year,
+}) => {
   return (
     <>
-      <div className="thumb-content" data-link={slug} data-id={id}>
-        <div
+      <div className="thumb-content" data-id={id}>
+        <a
+          href={`/s/` + slug}
           className="thumb-img"
           style={{
             backgroundImage: `url(./src/assets/${bigImg})`,
@@ -14,11 +24,15 @@ const ThumbContent = ({ id, bigImg, slug, title, artist, duration, year }) => {
           }}
         >
           &nbsp;
-        </div>
+        </a>
         <div className="name">
           <div>
-            <label className="name-session">{title}</label>
-            <span className="name-artist">{artist}</span>
+            <a href={`/s/` + slug} className="name-session">
+              {title}
+            </a>
+            <a href={slugArtist} className="name-artist">
+              {artist}
+            </a>
           </div>
           <div className="duration">
             <label>{duration}</label> <sup>{year}</sup>

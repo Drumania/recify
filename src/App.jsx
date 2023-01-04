@@ -6,9 +6,17 @@ import { ContextProvider } from "./context/AuthProvider";
 
 //pages
 import Home from "./pages/Home";
-import ContentDetail from "./pages/ContentDetail";
+
 import Nuevas from "./pages/Nuevas";
+import Discover from "./pages/Discover";
+
+import RecentlyPlayed from "./pages/RecentlyPlayed";
+import Favorites from "./pages/Favorites";
+import FollowedArtists from "./pages/FollowedArtists";
+
 import Category from "./pages/Category";
+import Artist from "./pages/Artist";
+import ContentDetail from "./pages/ContentDetail";
 
 //Navbar
 import Navbar from "./components/Navbar";
@@ -27,10 +35,20 @@ export default function App() {
               <Topbar />
               <Routes>
                 <Route index element={<Home />} />
-                <Route path=":contentSlug" element={<ContentDetail />} />
                 <Route path="nuevas" element={<Nuevas />} />
+                <Route path="discover" element={<Discover />} />
+
+                <Route path="recentlyplayed" element={<RecentlyPlayed />} />
+                <Route path="favorites" element={<Favorites />} />
+                <Route path="followedartists" element={<FollowedArtists />} />
+
+                <Route path=":artistSlug" element={<Artist />} />
+
                 <Route path="category" element={<Category />}>
                   <Route path=":categoryId" element={<Category />} />
+                </Route>
+                <Route path="s" element={<ContentDetail />}>
+                  <Route path=":contentSlug" element={<ContentDetail />} />
                 </Route>
               </Routes>
             </div>

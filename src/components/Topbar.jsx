@@ -2,6 +2,8 @@ import React from "react";
 import Login from "./Login";
 import useLogin from "../hooks/useLogin";
 import UserLoged from "./UserLoged";
+import ButtonBack from "./ButtonBack";
+import ButtonNext from "./ButtonNext";
 
 const Topbar = () => {
   const { isLogged, loginForm, setLoginForm, user, logout } = useLogin();
@@ -9,12 +11,8 @@ const Topbar = () => {
   return (
     <div className="topbar">
       <div className="arrow-nav">
-        <button>
-          <span className="material-symbols-outlined">arrow_back_ios</span>
-        </button>
-        <button>
-          <span className="material-symbols-outlined">arrow_forward_ios</span>
-        </button>
+        <ButtonBack />
+        <ButtonNext />
       </div>
       <div id="search">
         <input type="search" placeholder="Search..." />

@@ -2,7 +2,7 @@ export const artist = [
   {
     id: 1,
     title: "Radiohead",
-    slug: "Radiohead",
+    slug: "radiohead",
     logo: "radiohead_logoOso.jpg",
     sinopsis:
       "Recorded at Maida Vale Studios, London in December 2011.Produced and Mixed by Nigel Godrich. Brass: Noel Langley, Yazz Ahmed, Clare Moss, Trevor Mires, Owen Marshall, Ben Castle, Phil Todd ",

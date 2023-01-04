@@ -17,10 +17,12 @@ const Hero = () => {
         }}
       >
         <div className="hero-overlay">
-          <label>{contents[0].artist}</label>
+          <a className="hero-artist" href={contents[0].slugArtist}>
+            {contents[0].artist}
+          </a>
           <h1>{contents[0].title}</h1>
           {contents[0].year} &bull; {contents[0].duration}
-          <a href={contents[0].slug} className="btn-primary">
+          <a href={`/s/` + contents[0].slug} className="btn-primary">
             Ver
           </a>
         </div>

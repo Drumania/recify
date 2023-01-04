@@ -32,6 +32,7 @@ const SliderLarge = ({ titleSlider, condition }) => {
                   id={element.id}
                   bigImg={element.bigImg}
                   slug={element.slug}
+                  slugArtist={element.slugArtist}
                   title={element.title}
                   artist={element.artist}
                   duration={element.duration}

@@ -13,7 +13,7 @@ const ContentDetail = () => {
       <div
         className="content-back"
         style={{
-          backgroundImage: `url(./src/assets/${content.bigImg})`,
+          backgroundImage: `url(../src/assets/${content.bigImg})`,
           backgroundPosition: "center top",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",

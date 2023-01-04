@@ -19,7 +19,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link className="nav-link" to="/nuevas">
+          <Link className="nav-link" to="/discover">
             <span className="material-symbols-outlined">travel_explore</span>{" "}
             Discover
           </Link>
@@ -33,17 +33,17 @@ const Navbar = () => {
           <h5 className="divider">Your library</h5>
         </li>
         <li>
-          <Link className="nav-link" to="/nuevas">
+          <Link className="nav-link" to="/RecentlyPlayed">
             Recently Played
           </Link>
         </li>
         <li>
-          <Link className="nav-link" to="/nuevas">
+          <Link className="nav-link" to="/Favorites">
             Favorites
           </Link>
         </li>
         <li className="last-link">
-          <Link className="nav-link" to="/nuevas">
+          <Link className="nav-link" to="/Artists">
             Artists
           </Link>
         </li>
