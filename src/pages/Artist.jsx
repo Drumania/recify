@@ -9,48 +9,105 @@ import { contents } from "../API/api_content";
 const Artist = () => {
   let { artistSlug } = useParams();
 
-  const artistCont = artist.find((idslug) => idslug.slug === artistSlug);
+  const artistElement = artist.find(
+    (idArtistBySlug) => idArtistBySlug.slug === artistSlug
+  );
 
-  const artistContent = contents.find(
+  const artistContent = contents.filter(
     (content) => content.slugArtist === artistSlug
   );
-  console.log(artistContent);
+
   return (
     <>
-      <h3>{artistCont.title}</h3>
-
       <div className="artist">
-        <div className="col">
-          {artistCont.id}
-          <br />
-          <br />
-          {artistCont.logo}
-          <br />
-          <br />
-          {artistCont.sinopsis}
-          <br />
-          <br />
-          {artistCont.title}
-          <br />
-          <br />
-          {artistCont.slug}
-          <br />
-          <br />
-          {artistCont.category}
-          <br />
-          <br />
-        </div>
-        <div className="wrap-thumbs">
-          <ThumbContent
-            key={artistContent.id}
-            id={artistContent.id}
-            bigImg={artistContent.bigImg}
-            slug={artistContent.slug}
-            title={artistContent.title}
-            artist={artistContent.artist}
-            duration={artistContent.duration}
-            year={artistContent.year}
+        <div>
+          <div className="page-artist">
+            <div
+              className="img"
+              style={{
+                backgroundImage: `url(./src/assets/artist/${artistElement.logo})`,
+                backgroundPosition: "center top",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              &nbsp;
+            </div>
+            <h1 className="name">
+              {artistElement.title}
+              <span>/{artistElement.slug}</span>
+            </h1>
+            <button className="btn-primary-outline">Follow</button>
+          </div>
+
+          <img
+            className="big-img"
+            src={`./src/assets/artist/big/${artistElement.bigpic}`}
           />
+          {artistElement.sinopsis}
+
+          {/* <h2> {artistElement.category}</h2> */}
+
+          <ul className="artist-donate">
+            <li>Donate for this artist:</li>
+            <li className="artist-usd">
+              <button>10 $</button>
+              <button className="active">25 $</button>
+              <button>50 $</button>
+              <button>100 $</button>
+              <button>500 $</button>
+              <button>1000 $</button>
+            </li>
+            <li>
+              <a href="#" className="btn-primary-outline">
+                Send
+              </a>
+            </li>
+          </ul>
+
+          <ul className="artist-rrss">
+            {artistElement.facebook && (
+              <li>
+                <a href={`http://www.facebook.com./${artistElement.facebook}`}>
+                  facebook
+                  <span>/{artistElement.facebook}</span>
+                </a>
+              </li>
+            )}
+            {artistElement.instagram && (
+              <li>
+                <a
+                  href={`http://www.instagram.com./${artistElement.instagram}`}
+                >
+                  instagram
+                  <span>/{artistElement.instagram}</span>
+                </a>
+              </li>
+            )}
+            {artistElement.twitter && (
+              <li>
+                <a href={`http://www.twitter.com./${artistElement.twitter}`}>
+                  twitter
+                  <span>/{artistElement.twitter}</span>
+                </a>
+              </li>
+            )}
+          </ul>
+        </div>
+
+        <div className="wrap-thumbs">
+          {artistContent.map((element) => (
+            <ThumbContent
+              key={element.id}
+              id={element.id}
+              bigImg={element.bigImg}
+              slug={element.slug}
+              title={element.title}
+              artist={element.artist}
+              duration={element.duration}
+              year={element.year}
+            />
+          ))}
         </div>
       </div>
     </>
