@@ -26,6 +26,19 @@ export const artist = [
     twitter: false,
   },
   {
+    id: 7,
+    title: "Arizona Moon",
+    slug: "arizonamoon",
+    logo: "violet-moon.png",
+    bigpic: "arizonaband.jpeg",
+    sinopsis:
+      "Somo nosotros, una banda under que se las trae, dona plata para que grabemos un video. ",
+    category: "trap",
+    facebook: false,
+    instagram: false,
+    twitter: false,
+  },
+  {
     id: 3,
     title: "Foo Fighters",
     slug: "foofighters",
