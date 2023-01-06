@@ -767,7 +767,7 @@ button:hover {
 }
 
 .artist .artist-donate {
-  margin-top: 20px;
+  margin: 40px 0;
   padding: 0 7px 0 35px;
   display: flex;
   background-color: var(--black-color);

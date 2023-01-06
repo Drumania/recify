@@ -6,7 +6,7 @@ export const artist = [
     logo: "radiohead_logoOso.jpg",
     bigpic: "radioheadlandscape.png",
     sinopsis:
-      "Radiohead es una banda de rock alternativo formada en Oxford, Reino Unido en 1985. <br /><br />La banda está compuesta por Thom Yorke (vocalista, guitarra y teclado), Jonny Greenwood (guitarra, teclado y oud), Ed O'Brien (guitarra y coros), Colin Greenwood (bajo y teclado) y Philip Selway (batería y coros). La banda es conocida por su música experimental y su sonido en constante evolución a lo largo de su carrera.<br /><br />Su música incorpora elementos de rock, pop, electrónica, jazz y folk y su letra a menudo trata temas políticos y sociales. <br /><br />Radiohead ha vendido más de 30 millones de álbumes en todo el mundo y es conocida por álbumes como 'OK Computer', 'Kid A' y 'In Rainbows'.",
+      "Radiohead es una banda de rock alternativo formada en Oxford, Reino Unido en 1985. La banda está compuesta por Thom Yorke (vocalista, guitarra y teclado), Jonny Greenwood (guitarra, teclado y oud), Ed O'Brien (guitarra y coros), Colin Greenwood (bajo y teclado) y Philip Selway (batería y coros). La banda es conocida por su música experimental y su sonido en constante evolución a lo largo de su carrera. Su música incorpora elementos de rock, pop, electrónica, jazz y folk y su letra a menudo trata temas políticos y sociales. Radiohead ha vendido más de 30 millones de álbumes en todo el mundo y es conocida por álbumes como 'OK Computer', 'Kid A' y 'In Rainbows'.",
     category: "Rock",
     facebook: "radiohead",
     instagram: "radiohead",
