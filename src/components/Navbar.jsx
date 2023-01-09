@@ -43,7 +43,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="last-link">
-          <Link className="nav-link" to="/Artists">
+          <Link className="nav-link" to="/followedartists">
             Artists
           </Link>
         </li>
@@ -51,32 +51,17 @@ const Navbar = () => {
           <h5 className="divider">Playlists</h5>
         </li>
         <li>
-          <Link className="nav-link" to="/nuevas">
-            Chill-Rock
+          <Link className="nav-link create-playlist" to="/playlist">
+            <span className="material-symbols-outlined">post_add</span>
+            Create Playlist
+          </Link>
+          <Link className="nav-link" to="/playlist/rockfortheday">
+            Rock for the day
+          </Link>
+          <Link className="nav-link" to="/playlist/chill-rock">
+            Chill Rock
           </Link>
         </li>
-        {/* <li>
-          <details>
-            <summary className="nav-link">Categorias</summary>
-            <ul>
-              <li>
-                <Link to="/category/Terror">Terror</Link>
-              </li>
-              <li>
-                <Link to="/category/Drama">Drama</Link>
-              </li>
-              <li>
-                <Link to="/category/Comedia">Comedia</Link>
-              </li>
-              <li>
-                <Link to="/category/Documental">Documental</Link>
-              </li>
-              <li>
-                <Link to="/category/Ciencia ficción">Ciencia ficción</Link>
-              </li>
-            </ul>
-          </details>
-        </li> */}
       </ul>
     </nav>
   );

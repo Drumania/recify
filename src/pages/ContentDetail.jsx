@@ -10,6 +10,17 @@ const ContentDetail = () => {
 
   return (
     <>
+      <video
+        width="320"
+        height="240"
+        poster={`../src/assets/${content.bigImg}`}
+        controls
+      >
+        <source
+          src={`../src/assets/videos/${content.video}`}
+          type="video/mp4"
+        />
+      </video>
       <div
         className="content-back"
         style={{
@@ -18,17 +29,13 @@ const ContentDetail = () => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
-      >
-        <div>
-          <h1>{content.title}</h1>
-          <span>{content.duration}</span> - {content.category}
-          <br />
-          <br />
-          <p>{content.sinopsis}</p>
-          <a href="#!" className="btn-play">
-            &#8227;
-          </a>
-        </div>
+      ></div>
+      <div>
+        <h1>{content.title}</h1>
+        <span>{content.duration}</span> - {content.category}
+        <br />
+        <br />
+        <p>{content.sinopsis}</p>
       </div>
     </>
   );

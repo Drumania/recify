@@ -75,11 +75,12 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
+  padding-bottom: 60px;
 }
 
 .wrap-main {
   width: 100vw;
-  padding: 20px 40px 40px 240px;
+  padding: 20px 40px 100px 240px;
   min-width: 110px;
 }
 
@@ -187,13 +188,19 @@ nav a.login {
   margin-bottom: 30px;
 }
 
-h5.divider {
+.nav-item h5.divider {
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 0.7rem;
   color: var(--wh-color);
   padding-top: 10px;
   margin: 0;
+}
+
+.nav-item .create-playlist {
+  border-bottom: 1px solid var(--lines-color);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* user-loged */
@@ -500,11 +507,56 @@ button:hover {
   margin-right: 20px;
 }
 
+/* .thumb-content:hover {
+  background-color: #000;
+} */
+
 .thumb-content .thumb-img {
   height: 200px;
   display: block;
   border-radius: var(--border-radius);
+  position: relative;
 }
+
+.thumb-content .thumb-img .btn-play-thumb {
+  color: var(--fr-color);
+  font-size: 3rem;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.thumb-content .thumb-img .btn-play-thumb:hover {
+  transform: scale(1.3);
+  transition: all 0.2s;
+}
+
+.thumb-content .thumb-img .btn-add-queue {
+  color: var(--wh-color);
+  font-size: 2rem;
+  position: absolute;
+  bottom: 24px;
+  left: 60px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+/* .thumb-content .thumb-img .btn-add-favorite {
+  color: var(--wh-color);
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.thumb-content .thumb-img .btn-add-favorite:hover {
+  color: #bbac24;
+  transition: all 0.2s;
+} */
 
 .thumb-content .name {
   display: flex;
@@ -649,6 +701,137 @@ button:hover {
   margin-bottom: 20px;
 }
 
+/* playlist list */
+.playlist-content {
+  display: flex;
+  height: 90px;
+  margin-bottom: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playlist-content .img {
+  width: 200px;
+  height: 90px;
+}
+
+.playlist-content .title {
+}
+
+.playlist-content .artist {
+}
+
+.playlist-content .duration {
+}
+
+/* player */
+.player {
+  position: fixed;
+  bottom: 0;
+  height: 60px;
+  background-color: var(--black-color);
+  width: 100vw;
+  z-index: 2000;
+  border-top: 1px solid var(--lines-color);
+  -webkit-box-shadow: 0px -5px 17px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px -5px 17px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px -5px 17px 0px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player .video {
+  width: 200px;
+  background-color: var(--light-black-color);
+  min-height: 170px;
+}
+
+.player .player-wrapper {
+  width: calc(100vw - 200px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 10px;
+}
+
+.player .player-wrapper > div:nth-child(1) {
+  width: 30%;
+  text-align: left;
+}
+
+.player .player-wrapper > div:nth-child(1) .title {
+  font-size: 1rem;
+  line-height: 1rem;
+  display: block;
+}
+
+.player .player-wrapper > div:nth-child(1) .artist {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--wh-color);
+  text-decoration: none;
+}
+
+.player .player-wrapper > div:nth-child(1) .artist:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.player .player-wrapper > div:nth-child(2) {
+  width: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.player .player-wrapper > div:nth-child(2) span {
+  padding-right: 20px;
+}
+
+.player .player-wrapper > div:nth-child(2) span:hover {
+  color: var(--wh-color);
+  cursor: pointer;
+}
+
+.player .player-wrapper > div:nth-child(2) span:nth-child(2) {
+  color: var(--fr-color);
+  font-size: 3rem;
+  opacity: 1;
+}
+
+.player .player-wrapper > div:nth-child(2) span:nth-child(2):hover {
+  opacity: 0.8;
+}
+
+.player .player-wrapper > div:nth-child(3) {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.player .player-wrapper > div:nth-child(3) span {
+  padding-left: 20px;
+  opacity: 1;
+}
+
+.player .player-wrapper > div:nth-child(3) span:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.player .player-wrapper > div:nth-child(3) span:nth-child(3) {
+  color: var(--wh-color);
+  font-size: 4rem;
+}
+
 /* content detail */
 
 .content-back div {
@@ -750,6 +933,7 @@ button:hover {
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .artist .artist-rrss li a {

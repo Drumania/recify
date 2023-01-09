@@ -9,8 +9,10 @@ export const artist = [
       "Radiohead es una banda de rock alternativo formada en Oxford, Reino Unido en 1985. La banda está compuesta por Thom Yorke (vocalista, guitarra y teclado), Jonny Greenwood (guitarra, teclado y oud), Ed O'Brien (guitarra y coros), Colin Greenwood (bajo y teclado) y Philip Selway (batería y coros). La banda es conocida por su música experimental y su sonido en constante evolución a lo largo de su carrera. Su música incorpora elementos de rock, pop, electrónica, jazz y folk y su letra a menudo trata temas políticos y sociales. Radiohead ha vendido más de 30 millones de álbumes en todo el mundo y es conocida por álbumes como 'OK Computer', 'Kid A' y 'In Rainbows'.",
     category: "Rock",
     facebook: "radiohead",
-    instagram: "radiohead",
+    instagram: "radioheadradioheadradiohead",
     twitter: "radiohead",
+    spotify: "radiohead",
+    youtube: "radiohead",
   },
   {
     id: 2,
@@ -24,6 +26,8 @@ export const artist = [
     facebook: false,
     instagram: false,
     twitter: false,
+    spotify: false,
+    youtube: false,
   },
   {
     id: 7,
@@ -37,6 +41,8 @@ export const artist = [
     facebook: false,
     instagram: false,
     twitter: false,
+    spotify: "arizonamoonok",
+    youtube: "arizonamoonok",
   },
   {
     id: 3,
@@ -50,6 +56,8 @@ export const artist = [
     facebook: false,
     instagram: false,
     twitter: false,
+    spotify: false,
+    youtube: false,
   },
   {
     id: 4,
@@ -63,6 +71,8 @@ export const artist = [
     facebook: false,
     instagram: false,
     twitter: false,
+    spotify: false,
+    youtube: false,
   },
   {
     id: 5,
@@ -76,6 +86,8 @@ export const artist = [
     facebook: false,
     instagram: "wosito",
     twitter: false,
+    spotify: false,
+    youtube: false,
   },
   {
     id: 6,
@@ -89,5 +101,7 @@ export const artist = [
     facebook: false,
     instagram: false,
     twitter: false,
+    spotify: false,
+    youtube: false,
   },
 ];

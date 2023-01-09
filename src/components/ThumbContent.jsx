@@ -13,8 +13,7 @@ const ThumbContent = ({
   return (
     <>
       <div className="thumb-content" data-id={id}>
-        <a
-          href={`/s/` + slug}
+        <div
           className="thumb-img"
           style={{
             backgroundImage: `url(./src/assets/${bigImg})`,
@@ -23,8 +22,24 @@ const ThumbContent = ({
             backgroundRepeat: "no-repeat",
           }}
         >
-          &nbsp;
-        </a>
+          <button>
+            <a
+              href={`/s/` + slug}
+              class="btn-play-thumb material-symbols-outlined"
+              title="Play"
+            >
+              play_circle
+            </a>
+          </button>
+          <button>
+            <span
+              class="btn-add-queue material-symbols-outlined"
+              title="Add to queued"
+            >
+              playlist_add
+            </span>
+          </button>
+        </div>
         <div className="name">
           <div>
             <a href={`/s/` + slug} className="name-session">

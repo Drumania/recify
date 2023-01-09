@@ -17,10 +17,12 @@ import FollowedArtists from "./pages/FollowedArtists";
 import Category from "./pages/Category";
 import Artist from "./pages/Artist";
 import ContentDetail from "./pages/ContentDetail";
+import Playlist from "./pages/Playlist";
 
 //Navbar
 import Navbar from "./components/Navbar";
 import Topbar from "./components/Topbar";
+import Player from "./components/Player";
 
 export default function App() {
   return (
@@ -50,9 +52,14 @@ export default function App() {
                 <Route path="s" element={<ContentDetail />}>
                   <Route path=":contentSlug" element={<ContentDetail />} />
                 </Route>
+
+                <Route path="playlist" element={<Playlist />}>
+                  <Route path=":playlistSlug" element={<Playlist />} />
+                </Route>
               </Routes>
             </div>
           </div>
+          <Player />
         </BrowserRouter>
       </ContextProvider>
     </>

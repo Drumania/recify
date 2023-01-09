@@ -92,6 +92,22 @@ const Artist = () => {
                 </a>
               </li>
             )}
+            {artistElement.spotify && (
+              <li>
+                <a href={`http://www.spotify.com./${artistElement.spotify}`}>
+                  spotify
+                  <span>/{artistElement.spotify}</span>
+                </a>
+              </li>
+            )}
+            {artistElement.youtube && (
+              <li>
+                <a href={`http://www.youtube.com./${artistElement.youtube}`}>
+                  youtube
+                  <span>/{artistElement.youtube}</span>
+                </a>
+              </li>
+            )}
           </ul>
         </div>
 
