@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
 const Player = () => {
+  const videoRef = useRef();
+  const [stop, setStop] = useState(false);
+
+  const handleVideo = () => {
+    setStop(!stop);
+    if (stop === true) {
+      videoRef.current.pause();
+    } else {
+      videoRef.current.play();
+    }
+  };
+
   return (
     <div className="player">
       <div className="video">
-        <video width="200px" poster={`../src/assets/radio2.jpg`}>
+        <video width="200px" poster={`../src/assets/radio2.jpg`} ref={videoRef}>
           <source
             src={`../src/assets/videos/Radiohead - Bloom.mp4`}
             type="video/mp4"
+            controls
           />
         </video>
       </div>
@@ -21,16 +34,20 @@ const Player = () => {
           </a>
         </div>
         <div>
-          <span class="material-symbols-outlined">skip_previous</span>
-          <span class="material-symbols-outlined">play_circle</span>
-          <span class="material-symbols-outlined">pause</span>
-          <span class="material-symbols-outlined">skip_next</span>
+          <span className="material-symbols-outlined">skip_previous</span>
+          <span
+            className="material-symbols-outlined"
+            onClick={() => handleVideo()}
+          >
+            {stop ? "pause" : "play_circle"}
+          </span>
+          <span className="material-symbols-outlined">skip_next</span>
         </div>
         <div>
-          <span class="material-symbols-outlined">volume_up</span>
-          <span class="material-symbols-outlined">queue_music</span>
-          {/* <span class="material-symbols-outlined">cast</span> */}
-          <span class="material-symbols-outlined">expand_less</span>
+          <span className="material-symbols-outlined">volume_up</span>
+          <span className="material-symbols-outlined">queue_music</span>
+          {/* <span className="material-symbols-outlined">cast</span> */}
+          <span className="material-symbols-outlined">expand_less</span>
         </div>
       </div>
     </div>

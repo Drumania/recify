@@ -25,7 +25,7 @@ const ThumbContent = ({
           <button>
             <a
               href={`/s/` + slug}
-              class="btn-play-thumb material-symbols-outlined"
+              className="btn-play-thumb material-symbols-outlined"
               title="Play"
             >
               play_circle
@@ -33,7 +33,7 @@ const ThumbContent = ({
           </button>
           <button>
             <span
-              class="btn-add-queue material-symbols-outlined"
+              className="btn-add-queue material-symbols-outlined"
               title="Add to queued"
             >
               playlist_add
