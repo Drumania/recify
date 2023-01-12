@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import ThumbContent from "../components/ThumbContent";
 
@@ -8,6 +8,7 @@ import { contents } from "../API/api_content";
 
 const Artist = () => {
   let { artistSlug } = useParams();
+  const [donate, setDonate] = useState(25);
 
   const artistElement = artist.find(
     (idArtistBySlug) => idArtistBySlug.slug === artistSlug
@@ -47,28 +48,58 @@ const Artist = () => {
           {artistElement.sinopsis}
 
           {/* <h2> {artistElement.category}</h2> */}
-
-          <ul className="artist-donate">
-            <li>Donate for this artist:</li>
-            <li className="artist-usd">
-              <button>10 $</button>
-              <button className="active">25 $</button>
-              <button>50 $</button>
-              <button>100 $</button>
-              <button>500 $</button>
-              <button>1000 $</button>
-            </li>
-            <li>
-              <a href="#" className="btn-primary-outline">
-                Send
-              </a>
-            </li>
-          </ul>
-
+          {artistElement.donate && (
+            <ul className="artist-donate">
+              <li>Donate for this artist:</li>
+              <li className="artist-usd">
+                <button
+                  className={donate === 10 && "active"}
+                  onClick={() => setDonate(10)}
+                >
+                  10 $
+                </button>
+                <button
+                  className={donate === 25 && "active"}
+                  onClick={() => setDonate(25)}
+                >
+                  25 $
+                </button>
+                <button
+                  className={donate === 50 && "active"}
+                  onClick={() => setDonate(50)}
+                >
+                  50 $
+                </button>
+                <button
+                  className={donate === 100 && "active"}
+                  onClick={() => setDonate(100)}
+                >
+                  100 $
+                </button>
+                <button
+                  className={donate === 500 && "active"}
+                  onClick={() => setDonate(500)}
+                >
+                  500 $
+                </button>
+                <button
+                  className={donate === 1000 && "active"}
+                  onClick={() => setDonate(1000)}
+                >
+                  1000 $
+                </button>
+              </li>
+              <li>
+                <a href="#" className="btn-primary-outline">
+                  Send
+                </a>
+              </li>
+            </ul>
+          )}
           <ul className="artist-rrss">
             {artistElement.facebook && (
               <li>
-                <a href={`http://www.facebook.com./${artistElement.facebook}`}>
+                <a href={`http://www.facebook.com/${artistElement.facebook}`}>
                   facebook
                   <span>/{artistElement.facebook}</span>
                 </a>
@@ -76,9 +107,7 @@ const Artist = () => {
             )}
             {artistElement.instagram && (
               <li>
-                <a
-                  href={`http://www.instagram.com./${artistElement.instagram}`}
-                >
+                <a href={`http://www.instagram.com/${artistElement.instagram}`}>
                   instagram
                   <span>/{artistElement.instagram}</span>
                 </a>
@@ -86,7 +115,7 @@ const Artist = () => {
             )}
             {artistElement.twitter && (
               <li>
-                <a href={`http://www.twitter.com./${artistElement.twitter}`}>
+                <a href={`http://www.twitter.com/${artistElement.twitter}`}>
                   twitter
                   <span>/{artistElement.twitter}</span>
                 </a>
@@ -94,7 +123,7 @@ const Artist = () => {
             )}
             {artistElement.spotify && (
               <li>
-                <a href={`http://www.spotify.com./${artistElement.spotify}`}>
+                <a href={`http://www.spotify.com/${artistElement.spotify}`}>
                   spotify
                   <span>/{artistElement.spotify}</span>
                 </a>
@@ -102,7 +131,7 @@ const Artist = () => {
             )}
             {artistElement.youtube && (
               <li>
-                <a href={`http://www.youtube.com./${artistElement.youtube}`}>
+                <a href={`http://www.youtube.com/${artistElement.youtube}`}>
                   youtube
                   <span>/{artistElement.youtube}</span>
                 </a>

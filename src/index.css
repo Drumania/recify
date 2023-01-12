@@ -741,6 +741,22 @@ button:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.2s;
+}
+
+.player-full {
+  position: fixed;
+  bottom: 0;
+  height: 100vh;
+  background-color: var(--black-color);
+  width: calc(100vw - 200px);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  left: 200px;
+  transition: all 0.2s;
 }
 
 .player .video {
@@ -749,7 +765,46 @@ button:hover {
   min-height: 170px;
 }
 
-.player .player-wrapper {
+.player-full .video {
+  width: calc(100vw - 200px);
+  background-color: var(--light-black-color);
+  height: 100vh;
+}
+
+.player .video .maximize-video,
+.player-full .video .maximize-video {
+  display: none;
+}
+
+.player .video:hover .maximize-video {
+  position: absolute;
+  top: -55px;
+  left: 0;
+  width: 200px;
+  background: #00000047;
+  height: 113px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.player-full .video:hover .maximize-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 200px);
+  background: #00000047;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  rotate: 180deg;
+}
+
+.player .player-wrapper,
+.player-full .player-wrapper {
   width: calc(100vw - 200px);
   display: flex;
   flex-direction: row;
@@ -758,30 +813,35 @@ button:hover {
   padding: 0 30px 0 10px;
 }
 
-.player .player-wrapper > div:nth-child(1) {
+.player .player-wrapper > div:nth-child(1),
+.player-full .player-wrapper > div:nth-child(1) {
   width: 30%;
   text-align: left;
 }
 
-.player .player-wrapper > div:nth-child(1) .title {
+.player .player-wrapper > div:nth-child(1) .title,
+.player-full .player-wrapper > div:nth-child(1) .title {
   font-size: 1rem;
   line-height: 1rem;
   display: block;
 }
 
-.player .player-wrapper > div:nth-child(1) .artist {
+.player .player-wrapper > div:nth-child(1) .artist,
+.player-full .player-wrapper > div:nth-child(1) .artist {
   font-size: 1rem;
   font-weight: bold;
   color: var(--wh-color);
   text-decoration: none;
 }
 
-.player .player-wrapper > div:nth-child(1) .artist:hover {
+.player .player-wrapper > div:nth-child(1) .artist:hover,
+.player-full .player-wrapper > div:nth-child(1) .artist:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
-.player .player-wrapper > div:nth-child(2) {
+.player .player-wrapper > div:nth-child(2),
+.player-full .player-wrapper > div:nth-child(2) {
   width: 40%;
   text-align: center;
   display: flex;
@@ -790,26 +850,31 @@ button:hover {
   justify-content: center;
 }
 
-.player .player-wrapper > div:nth-child(2) span {
+.player .player-wrapper > div:nth-child(2) span,
+.player-full .player-wrapper > div:nth-child(2) span {
   padding-right: 20px;
 }
 
-.player .player-wrapper > div:nth-child(2) span:hover {
+.player .player-wrapper > div:nth-child(2) span:hover,
+.player-full .player-wrapper > div:nth-child(2) span:hover {
   color: var(--wh-color);
   cursor: pointer;
 }
 
-.player .player-wrapper > div:nth-child(2) span:nth-child(2) {
+.player .player-wrapper > div:nth-child(2) span:nth-child(2),
+.player-full .player-wrapper > div:nth-child(2) span:nth-child(2) {
   color: var(--fr-color);
   font-size: 3rem;
   opacity: 1;
 }
 
-.player .player-wrapper > div:nth-child(2) span:nth-child(2):hover {
+.player .player-wrapper > div:nth-child(2) span:nth-child(2):hover,
+.player-full .player-wrapper > div:nth-child(2) span:nth-child(2):hover {
   opacity: 0.8;
 }
 
-.player .player-wrapper > div:nth-child(3) {
+.player .player-wrapper > div:nth-child(3),
+.player-full .player-wrapper > div:nth-child(3) {
   width: 30%;
   display: flex;
   flex-direction: row;
@@ -817,12 +882,14 @@ button:hover {
   justify-content: flex-end;
 }
 
-.player .player-wrapper > div:nth-child(3) span {
+.player .player-wrapper > div:nth-child(3) span,
+.player-full .player-wrapper > div:nth-child(3) span {
   padding-left: 20px;
   opacity: 1;
 }
 
-.player .player-wrapper > div:nth-child(3) span:hover {
+.player .player-wrapper > div:nth-child(3) span:hover,
+.player-full .player-wrapper > div:nth-child(3) span:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -830,6 +897,12 @@ button:hover {
 .player .player-wrapper > div:nth-child(3) span:nth-child(3) {
   color: var(--wh-color);
   font-size: 4rem;
+}
+
+.player-full .player-wrapper > div:nth-child(3) span:nth-child(3) {
+  color: var(--wh-color);
+  font-size: 4rem;
+  rotate: 180deg;
 }
 
 /* content detail */

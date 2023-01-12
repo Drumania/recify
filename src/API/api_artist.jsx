@@ -9,10 +9,11 @@ export const artist = [
       "Radiohead es una banda de rock alternativo formada en Oxford, Reino Unido en 1985. La banda está compuesta por Thom Yorke (vocalista, guitarra y teclado), Jonny Greenwood (guitarra, teclado y oud), Ed O'Brien (guitarra y coros), Colin Greenwood (bajo y teclado) y Philip Selway (batería y coros). La banda es conocida por su música experimental y su sonido en constante evolución a lo largo de su carrera. Su música incorpora elementos de rock, pop, electrónica, jazz y folk y su letra a menudo trata temas políticos y sociales. Radiohead ha vendido más de 30 millones de álbumes en todo el mundo y es conocida por álbumes como 'OK Computer', 'Kid A' y 'In Rainbows'.",
     category: "Rock",
     facebook: "radiohead",
-    instagram: "radioheadradioheadradiohead",
+    instagram: "radiohead",
     twitter: "radiohead",
     spotify: "radiohead",
     youtube: "radiohead",
+    donate: false,
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ export const artist = [
     twitter: false,
     spotify: false,
     youtube: false,
+    donate: false,
   },
   {
     id: 7,
@@ -36,13 +38,14 @@ export const artist = [
     logo: "violet-moon.png",
     bigpic: "arizonaband.jpeg",
     sinopsis:
-      "Somo nosotros, una banda under que se las trae, dona plata para que grabemos un video. ",
+      "Somos una banda nacida en 2021 hacemos musica rock mezclado con un poco de tecno/funk, tenemos 4 temas y queremos grabar un video de una session, nos ayudas donandones para que grabemos un video. ",
     category: "trap",
     facebook: false,
-    instagram: false,
+    instagram: "arizonamoonok",
     twitter: false,
     spotify: "arizonamoonok",
     youtube: "arizonamoonok",
+    donate: true,
   },
   {
     id: 3,
@@ -58,6 +61,7 @@ export const artist = [
     twitter: false,
     spotify: false,
     youtube: false,
+    donate: false,
   },
   {
     id: 4,
@@ -73,6 +77,7 @@ export const artist = [
     twitter: false,
     spotify: false,
     youtube: false,
+    donate: false,
   },
   {
     id: 5,
@@ -88,6 +93,7 @@ export const artist = [
     twitter: false,
     spotify: false,
     youtube: false,
+    donate: false,
   },
   {
     id: 6,
@@ -103,5 +109,6 @@ export const artist = [
     twitter: false,
     spotify: false,
     youtube: false,
+    donate: false,
   },
 ];
