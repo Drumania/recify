@@ -3,6 +3,8 @@ import React, { useRef, useState } from "react";
 const Player = () => {
   const videoRef = useRef();
   const [stop, setStop] = useState(false);
+  const [volume, setVolume] = useState(true);
+
   const [playerFull, setPlayerFull] = useState(false);
 
   const handleVideo = () => {
@@ -11,6 +13,17 @@ const Player = () => {
       videoRef.current.pause();
     } else {
       videoRef.current.play();
+    }
+  };
+
+  const handleVolume = () => {
+    setVolume(!volume);
+    if (volume === true) {
+      videoRef.current.defaultMuted == true;
+      videoRef.current.muted == true;
+    } else {
+      videoRef.current.defaultMuted == false;
+      videoRef.current.muted == false;
     }
   };
 
@@ -56,7 +69,12 @@ const Player = () => {
           <span className="material-symbols-outlined">skip_next</span>
         </div>
         <div>
-          <span className="material-symbols-outlined">volume_up</span>
+          <span
+            className="material-symbols-outlined"
+            onClick={() => handleVolume()}
+          >
+            volume_up
+          </span>
           <span className="material-symbols-outlined">queue_music</span>
           {/* <span className="material-symbols-outlined">cast</span> */}
           <span

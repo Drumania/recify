@@ -24,11 +24,13 @@ export const artist = [
     sinopsis:
       "Recorded at Maida Vale Studios, London in December 2011.Produced and Mixed by Nigel Godrich. Brass: Noel Langley, Yazz Ahmed, Clare Moss, Trevor Mires, Owen Marshall, Ben Castle, Phil Todd ",
     category: "Rock",
-    facebook: false,
-    instagram: false,
-    twitter: false,
-    spotify: false,
-    youtube: false,
+    rrss: {
+      facebook: false,
+      instagram: false,
+      twitter: false,
+      spotify: false,
+      youtube: false,
+    },
     donate: false,
   },
   {

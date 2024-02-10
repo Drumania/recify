@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import ThumbContent from "../components/ThumbContent";
+import Donate from "../components/Donate";
 
 //Fake Api
 import { artist } from "../API/api_artist";
 import { contents } from "../API/api_content";
+import LinkRrss from "../components/LinkRrss";
+import Timeline from "../components/Timeline";
 
 const Artist = () => {
   let { artistSlug } = useParams();
-  const [donate, setDonate] = useState(25);
 
   const artistElement = artist.find(
     (idArtistBySlug) => idArtistBySlug.slug === artistSlug
@@ -48,99 +50,51 @@ const Artist = () => {
           {artistElement.sinopsis}
 
           {/* <h2> {artistElement.category}</h2> */}
-          {artistElement.donate && (
-            <ul className="artist-donate">
-              <li>Donate for this artist:</li>
-              <li className="artist-usd">
-                <button
-                  className={donate === 10 && "active"}
-                  onClick={() => setDonate(10)}
-                >
-                  10 $
-                </button>
-                <button
-                  className={donate === 25 && "active"}
-                  onClick={() => setDonate(25)}
-                >
-                  25 $
-                </button>
-                <button
-                  className={donate === 50 && "active"}
-                  onClick={() => setDonate(50)}
-                >
-                  50 $
-                </button>
-                <button
-                  className={donate === 100 && "active"}
-                  onClick={() => setDonate(100)}
-                >
-                  100 $
-                </button>
-                <button
-                  className={donate === 500 && "active"}
-                  onClick={() => setDonate(500)}
-                >
-                  500 $
-                </button>
-                <button
-                  className={donate === 1000 && "active"}
-                  onClick={() => setDonate(1000)}
-                >
-                  1000 $
-                </button>
-              </li>
-              <li>
-                <a href="#" className="btn-primary-outline">
-                  Send
-                </a>
-              </li>
-            </ul>
-          )}
+          {artistElement.donate && <Donate />}
+
           <ul className="artist-rrss">
             {artistElement.facebook && (
-              <li>
-                <a href={`http://www.facebook.com/${artistElement.facebook}`}>
-                  facebook
-                  <span>/{artistElement.facebook}</span>
-                </a>
-              </li>
+              <LinkRrss
+                url={`http://www.facebook.com/`}
+                nameRss={"facebook"}
+                slug={artistElement.facebook}
+              />
             )}
+
             {artistElement.instagram && (
-              <li>
-                <a href={`http://www.instagram.com/${artistElement.instagram}`}>
-                  instagram
-                  <span>/{artistElement.instagram}</span>
-                </a>
-              </li>
+              <LinkRrss
+                url={`http://www.instagram.com/`}
+                nameRss={"instagram"}
+                slug={artistElement.instagram}
+              />
             )}
             {artistElement.twitter && (
-              <li>
-                <a href={`http://www.twitter.com/${artistElement.twitter}`}>
-                  twitter
-                  <span>/{artistElement.twitter}</span>
-                </a>
-              </li>
+              <LinkRrss
+                url={`http://www.twitter.com/`}
+                nameRss={"twitter"}
+                slug={artistElement.twitter}
+              />
             )}
             {artistElement.spotify && (
-              <li>
-                <a href={`http://www.spotify.com/${artistElement.spotify}`}>
-                  spotify
-                  <span>/{artistElement.spotify}</span>
-                </a>
-              </li>
+              <LinkRrss
+                url={`http://www.spotify.com/`}
+                nameRss={"spotify"}
+                slug={artistElement.spotify}
+              />
             )}
             {artistElement.youtube && (
-              <li>
-                <a href={`http://www.youtube.com/${artistElement.youtube}`}>
-                  youtube
-                  <span>/{artistElement.youtube}</span>
-                </a>
-              </li>
+              <LinkRrss
+                url={`http://www.youtube.com/`}
+                nameRss={"youtube"}
+                slug={artistElement.youtube}
+              />
             )}
           </ul>
         </div>
 
-        <div className="wrap-thumbs">
+        <Timeline />
+        {/*
+         <div className="wrap-thumbs">
           {artistContent.map((element) => (
             <ThumbContent
               key={element.id}
@@ -152,8 +106,8 @@ const Artist = () => {
               duration={element.duration}
               year={element.year}
             />
-          ))}
-        </div>
+          ))} 
+        </div>*/}
       </div>
     </>
   );
