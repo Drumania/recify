@@ -6,7 +6,7 @@ const ThumbArtist = ({ id, title, slug, logo }) => {
       <div
         className="img"
         style={{
-          backgroundImage: `url(./src/assets/artist/${logo})`,
+          backgroundImage: `url(artist/${logo})`,
           backgroundPosition: "center top",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",

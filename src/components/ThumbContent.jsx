@@ -16,7 +16,7 @@ const ThumbContent = ({
         <div
           className="thumb-img"
           style={{
-            backgroundImage: `url(./src/assets/${bigImg})`,
+            backgroundImage: `url(${bigImg})`,
             backgroundPosition: "center top",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",

@@ -28,7 +28,7 @@ const Artist = () => {
             <div
               className="img"
               style={{
-                backgroundImage: `url(./src/assets/artist/${artistElement.logo})`,
+                backgroundImage: `url(artist/${artistElement.logo})`,
                 backgroundPosition: "center top",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -43,10 +43,7 @@ const Artist = () => {
             <button className="btn-primary-outline">Follow</button>
           </div>
 
-          <img
-            className="big-img"
-            src={`./src/assets/artist/big/${artistElement.bigpic}`}
-          />
+          <img className="big-img" src={`artist/big/${artistElement.bigpic}`} />
           {artistElement.sinopsis}
 
           {/* <h2> {artistElement.category}</h2> */}

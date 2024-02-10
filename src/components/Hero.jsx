@@ -10,7 +10,7 @@ const Hero = () => {
       <div
         className="hero"
         style={{
-          backgroundImage: `url(./src/assets/${contents[0].bigImg})`,
+          backgroundImage: `url(${contents[0].bigImg})`,
           backgroundPosition: "center center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
