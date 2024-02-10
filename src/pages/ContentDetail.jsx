@@ -10,21 +10,13 @@ const ContentDetail = () => {
 
   return (
     <>
-      <video
-        width="320"
-        height="240"
-        poster={`../src/assets/${content.bigImg}`}
-        controls
-      >
-        <source
-          src={`../src/assets/videos/${content.video}`}
-          type="video/mp4"
-        />
+      <video width="320" height="240" poster={`${content.bigImg}`} controls>
+        <source src={`videos/${content.video}`} type="video/mp4" />
       </video>
       <div
         className="content-back"
         style={{
-          backgroundImage: `url(../src/assets/${content.bigImg})`,
+          backgroundImage: `url(${content.bigImg})`,
           backgroundPosition: "center top",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",

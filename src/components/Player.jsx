@@ -30,14 +30,9 @@ const Player = () => {
   return (
     <div className={playerFull ? "player-full" : "player"}>
       <div className="video">
-        <video
-          width="100%"
-          height="100%"
-          poster={`../src/assets/radio2.jpg`}
-          ref={videoRef}
-        >
+        <video width="100%" height="100%" poster={`radio2.jpg`} ref={videoRef}>
           <source
-            src={`../src/assets/videos/Radiohead - Bloom.mp4`}
+            src={`./videos/Radiohead - Bloom.mp4`}
             type="video/mp4"
             controls
           />

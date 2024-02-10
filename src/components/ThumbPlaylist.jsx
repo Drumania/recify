@@ -7,7 +7,7 @@ const ThumbPlaylist = () => {
         <div
           className="img"
           style={{
-            backgroundImage: `url(../src/assets/radio2.jpg)`,
+            backgroundImage: `url(radio2.jpg)`,
             backgroundPosition: "center top",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -18,7 +18,7 @@ const ThumbPlaylist = () => {
         <div
           className="img"
           style={{
-            backgroundImage: `url(../src/assets/radio1.jpg)`,
+            backgroundImage: `url(radio1.jpg)`,
             backgroundPosition: "center top",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -29,7 +29,7 @@ const ThumbPlaylist = () => {
         <div
           className="img"
           style={{
-            backgroundImage: `url(../src/assets/tamaimpa.png)`,
+            backgroundImage: `url(tamaimpa.png)`,
             backgroundPosition: "center top",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -40,7 +40,7 @@ const ThumbPlaylist = () => {
         <div
           className="img"
           style={{
-            backgroundImage: `url(../src/assets/ff.jpg)`,
+            backgroundImage: `url(ff.jpg)`,
             backgroundPosition: "center top",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
